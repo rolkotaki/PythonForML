@@ -7,6 +7,9 @@ from scipy.sparse import csr_matrix
 
 # ##### Dimensionality Reduction Using Feature Extraction
 
+# feature extraction: to reduce the dimensionality of our feature matrix by creating new features with
+# similar ability to train quality models but with significantly fewer dimensions.
+
 
 # Reducing Features Using Principal Components - reduce the number of features while retaining the variance in the data
 
