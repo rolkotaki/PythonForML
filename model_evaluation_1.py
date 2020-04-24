@@ -5,7 +5,8 @@ from sklearn.linear_model import LogisticRegression, LinearRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.dummy import DummyRegressor, DummyClassifier
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, roc_curve, roc_auc_score
+import matplotlib.pyplot as plt
 
 
 # Cross-Validating Models
@@ -133,3 +134,58 @@ print(accuracy_score(y_test, y_hat))
 
 
 # Evaluating Binary Classifier Thresholds
+
+# Receiving Operating Characteristic (ROC):
+# ROC compares the presence of true positives and false positives at every probability threshold (i.e., the probability
+# at which an observation is predicted to be a class). By plotting the ROC curve, we can see how the model performs.
+
+features, target = datasets.make_classification(n_samples=10000,
+                                                n_features=10,
+                                                n_classes=2,
+                                                n_informative=3,
+                                                random_state=3)
+# Split into training and test sets
+features_train, features_test, target_train, target_test = train_test_split(
+    features, target, test_size=0.1, random_state=1)
+# Create classifier
+logit = LogisticRegression()
+# Train model
+logit.fit(features_train, target_train)
+# Get predicted probabilities
+target_probabilities = logit.predict_proba(features_test)[:, 1]  # ?
+# Create true and false positive rates
+false_positive_rate, true_positive_rate, threshold = roc_curve(target_test,
+                                                               target_probabilities)
+# print(logit.classes_)
+# print(target_probabilities)[:, 1]
+
+# Plot ROC curve
+plt.title("Receiver Operating Characteristic")
+plt.plot(false_positive_rate, true_positive_rate)
+plt.plot([0, 1], ls="--")
+plt.plot([0, 0], [1, 0] , c=".7"), plt.plot([1, 1], c=".7")
+plt.ylabel("True Positive Rate")
+plt.xlabel("False Positive Rate")
+plt.show()
+
+# In this example, the first observation has an ~87% chance of being in the negative class (0) and a 13% chance of
+# being in the positive class (1). By default, scikit-learn predicts an observation is part of the positive class if
+# the probability is greater than 0.5 (called the threshold). However, instead of a middle ground, we will often want
+# to explicitly bias our model to use a different threshold for substantive reasons. For example, if a false positive
+# is very costly to our company, we might prefer a model that has a high probability threshold. We fail to predict some
+# positives, but when an observation is predicted to be positive, we can be confident that the prediction is correct.
+
+print("Threshold:", threshold[116])  # ???
+print("True Positive Rate:", true_positive_rate[116])
+print("False Positive Rate:", false_positive_rate[116])
+
+# However, if we increase the threshold to ~80% (i.e., increase how certain the model has to be before it predicts an
+# observation as positive) the TPR drops significantly but so does the FPR:
+
+print("Threshold:", threshold[45])
+print("True Positive Rate:", true_positive_rate[45])
+print("False Positive Rate:", false_positive_rate[45])
+
+# AUCROC: area under the ROC curve; to judge the overall equality of a model at all possible thresholds.
+# Calculate area under curve
+print(roc_auc_score(target_test, target_probabilities))
