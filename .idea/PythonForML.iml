@@ -7,5 +7,7 @@
     <orderEntry type="jdk" jdkName="Python 3.8" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Parquet" />
+    <orderEntry type="module" module-name="e2e_test_engine" />
+    <orderEntry type="module" module-name="NRPS" />
   </component>
 </module>

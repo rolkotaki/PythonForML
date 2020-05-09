@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../NRPS/.idea/NRPS.iml" filepath="$PROJECT_DIR$/../NRPS/.idea/NRPS.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Parquet/.idea/Parquet.iml" filepath="$PROJECT_DIR$/../Parquet/.idea/Parquet.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/PythonForML.iml" filepath="$PROJECT_DIR$/.idea/PythonForML.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../python/projects/!selenium_e2e_tests/e2e_test_engine/.idea/e2e_test_engine.iml" filepath="$PROJECT_DIR$/../../python/projects/!selenium_e2e_tests/e2e_test_engine/.idea/e2e_test_engine.iml" />
     </modules>
   </component>
 </project>
