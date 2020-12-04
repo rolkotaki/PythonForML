@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../KolonialWebScraping/.idea/KolonialWebScraping.iml" filepath="$PROJECT_DIR$/../KolonialWebScraping/.idea/KolonialWebScraping.iml" />
       <module fileurl="file://$PROJECT_DIR$/../NRPS/.idea/NRPS.iml" filepath="$PROJECT_DIR$/../NRPS/.idea/NRPS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../NRPSGadgets/.idea/NRPSGadgets.iml" filepath="$PROJECT_DIR$/../NRPSGadgets/.idea/NRPSGadgets.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Parquet/.idea/Parquet.iml" filepath="$PROJECT_DIR$/../Parquet/.idea/Parquet.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/PythonForML.iml" filepath="$PROJECT_DIR$/.idea/PythonForML.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Test/.idea/Test.iml" filepath="$PROJECT_DIR$/../Test/.idea/Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../python/projects/!selenium_e2e_tests/e2e_test_engine/.idea/e2e_test_engine.iml" filepath="$PROJECT_DIR$/../../python/projects/!selenium_e2e_tests/e2e_test_engine/.idea/e2e_test_engine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../learning-django-2825501/.idea/learning-django-2825501.iml" filepath="$PROJECT_DIR$/../learning-django-2825501/.idea/learning-django-2825501.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../machine_rental_project/.idea/machine_rental_project.iml" filepath="$PROJECT_DIR$/../machine_rental_project/.idea/machine_rental_project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../LinkedIN_courses/django_2/03_07_end/nandiasgarden-project/.idea/nandiasgarden-project.iml" filepath="$PROJECT_DIR$/../../LinkedIN_courses/django_2/03_07_end/nandiasgarden-project/.idea/nandiasgarden-project.iml" />
     </modules>
   </component>
 </project>
